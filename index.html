@@ -56,7 +56,7 @@
         }
         section{
             box-shadow: -2px -2px 10px 0px #7736b1, 2px 2px 10px 0px #4cfff6;
-            padding: .5%;
+            padding: .8%;
             margin: 3%;
         }
         .idiomas{
@@ -88,9 +88,9 @@
                     <button id="trilho" class="trilho mt-2">
                         <div id="btnDL" class=" border border-white"></div>
                     </button>
-                    <div id="seletoridiomas" class="grid grid-rows-1">
-                        <div class="grid grid-cols-3 md:pl-28 md:pr-28">
-                            <button class="idiomas cursor-pointer text-end" onclick="alterarIdioma('pt-br')">pt-br</button>
+                    <div id="seletoridiomas" class="grid grid-rows-1 bg-gray-500">
+                        <div class="grid grid-cols-3 md:pl-15 md:pr-15 lg:pl-28 lg:pr-28">
+                            <button class="idiomas cursor-pointer text-end bg-red-800" onclick="alterarIdioma('pt-br')">pt-br</button>
                             <p class="mt-2 text-center">­│</p>
                             <button class="idiomas cursor-pointer text-start" onclick="alterarIdioma('en')">en</button>
                         </div>
@@ -113,32 +113,32 @@
             <!-- 1 coluna em mobile, 3 em desktop -->
             <div class="grid grid-rows-1 mt-14 md:mt-24">
                 <div class="grid grid-cols-1 md:grid-cols-3">
-                    <img class="foto mt-15 w-44 md:w-44 md:col-span-1 row-span-1 justify-self-center rounded-full bordas-perfil" src="img/fotoperfil.jpg" alt="">
+                    <img class="foto mt-15 w-44 md:w-56 md:col-span-1 row-span-1 justify-self-center rounded-full bordas-perfil" src="img/fotoperfil.jpg" alt="">
                     <div class="grid grid-rows-1 col-span-2">
                         <div class="grid grid-cols-1">
-                            <p data-translate="introducao" class="text-3xl md:text-5xl md:mt-15 text-center font-extrabold">Fique a Vontade para Conhecer Mais Sobre Mim</p>
+                            <p data-translate="introducao" class="text-3xl md:text-5xl md:mt-24 text-center font-extrabold">Fique a Vontade para Conhecer Mais Sobre Mim</p>
                         </div>
                     </div>  
                 </div>
             </div>
             
         </div>
-        <section id="sobre-mim" class="grid grid-rows-1 rounded h-svh">
+        <section id="sobre-mim" class="grid grid-rows-1 rounded">
             <div class="grid grid-rows-1">
                 <div class="grid grid-cols-1">
-                    <p class="text-center text-3xl font-bold">Sobre Mim</p>
-                    <p class="text-center">Meu nome é Maicon, tenho 28 anos e sou natural de Toledo PR, mas atualmente moro em Vila Nova PR.
+                    <p data-translate="sobreMimM" class="text-center text-3xl font-bold">Sobre Mim</p>
+                    <p data-translate="" class="text-center">Meu nome é Maicon, tenho 28 anos e sou natural de Toledo PR, mas atualmente moro em Vila Nova PR.
                          Gosto de conteúdos relacionados a computação, música, arte e atividades físicas, e também sempre busco aprender e evoluir em todos os aspectos da vida.<br>
-                           Em outubro de 2024, comecei a cursar Tecnologia em Sistemas para Internet na <a href="https://www.utfpr.edu.br/campus/toledo">UTFPR campus Toledo</a>, para que no futuro (não tão distante, eu espero) eu possa mudar de profissão.</p>
-                    <p class="text-center text-3xl font-bold">Gostos</p>
-                    <p class="font-bold">Alguns dos meus gostos incluem:</p>
+                           Em outubro de 2024, comecei a cursar Tecnologia em Sistemas para Internet na <a data-translate="" href="https://www.utfpr.edu.br/campus/toledo">UTFPR campus Toledo</a>, para que no futuro (não tão distante, eu espero) eu possa mudar de profissão.</p>
+                    <p data-translate="" class="text-center text-3xl font-bold">Gostos</p>
+                    <p data-translate="" class="font-bold">Alguns dos meus gostos incluem:</p>
                     <ul>
-                        <li class="ml-5 md:ml-20">Gosto de ouvir vários tipos de músicas, entretanto acredito que o momento e as emoções são o que escolhem a música.</li>
-                        <li class="ml-5 md:ml-20">Assistir animes, filmes e séries de ficção científica são um dos meus gostos prediletos.</li>
-                        <li class="ml-5 md:ml-20">Praticar exercícios do tipo corrida, ciclismo e calistenia.</li>
-                        <li class="ml-5 md:ml-20">Explorar a natureza, fazendo caminhadas ao ar livre.</li>
+                        <li data-translate="" class="ml-5 md:ml-20">Gosto de ouvir vários tipos de músicas, entretanto acredito que o momento e as emoções são o que escolhem a música.</li>
+                        <li data-translate="" class="ml-5 md:ml-20">Assistir animes, filmes e séries de ficção científica são um dos meus gostos prediletos.</li>
+                        <li data-translate="" class="ml-5 md:ml-20">Praticar exercícios do tipo corrida, ciclismo e calistenia.</li>
+                        <li data-translate="" class="ml-5 md:ml-20">Explorar a natureza, fazendo caminhadas ao ar livre.</li>
                     </ul>
-                    <p class="font-bold text-center">Exemplos de Músicas e Vídeos</p>
+                    <p data-translate="" class="font-bold text-center">Exemplos de Músicas</p>
                     <div class="grid grid-rows-1">
                         
                         <div class="grid grid-cols-1 justify-self-center">
@@ -157,12 +157,12 @@
             </div>
         </section>
 
-        <section id="habilidades" class="rounded">
-            <p>Em desenvolvimento</p>
+        <section id="habilidades" class="rounded text-center">
+            <p data-translate="emDev">Em Desenvolvimento</p>
         </section>
 
-        <section id="contato" class="rounded">
-            <p>Em desenvolvimento</p>
+        <section id="contato" class="rounded text-center">
+            <p data-translate="emDev">Em Desenvolvimento</p>
         </section>
         
     <script src="scripts.js"></script>

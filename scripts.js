@@ -38,7 +38,7 @@ btnMenu2.addEventListener('click', () => {
         y: 0
     })
     gsap.fromTo('nav', {
-        height: 700,
+        height: 750,
     },{
         height: 47,
         delay: 3,
@@ -124,14 +124,18 @@ btnMenu2.addEventListener('click', () => {
         'pt-br': {
             introducao: 'Fique a Vontade para Conhecer Mais Sobre Mim',
             inicioM: 'Início',
-            sobreMim: 'Sobre Mim',
-            contatoM: 'Contato'
+            sobreMimM: 'Sobre Mim',
+            habilidadesM: 'Habilidades',
+            contatoM: 'Contato',
+            emDev: 'Em Desenvolvimento'
         },
         'en': {
             introducao: 'Feel Free to Learn More About Me',
             inicioM: 'Home',
-            sobreMim: 'About Me',
-            contatoM: 'Contact'
+            sobreMimM: 'About Me',
+            habilidadesM: 'Skills',
+            contatoM: 'Contact',
+            emDev: 'In Development'
         }
     };
 
