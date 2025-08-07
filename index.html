@@ -56,6 +56,8 @@
         }
         section{
             box-shadow: -2px -2px 10px 0px #7736b1, 2px 2px 10px 0px #4cfff6;
+            padding: .5%;
+            margin: 3%;
         }
         .idiomas{
             font-weight: 500;
@@ -88,39 +90,40 @@
                     </button>
                     <div id="seletoridiomas" class="grid grid-rows-1">
                         <div class="grid grid-cols-3 md:pl-28 md:pr-28">
-                            <button class="idiomas cursor-pointer text-end hover:text-cyan-600" onclick="alterarIdioma('pt-br')">pt-br</button>
+                            <button class="idiomas cursor-pointer text-end" onclick="alterarIdioma('pt-br')">pt-br</button>
                             <p class="mt-2 text-center">­│</p>
-                            <button class="idiomas cursor-pointer text-start hover:text-cyan-600" onclick="alterarIdioma('en')">en</button>
+                            <button class="idiomas cursor-pointer text-start" onclick="alterarIdioma('en')">en</button>
                         </div>
                     </div>
                     
                 </div>
-                <p id="Intro" class="absolute justify-self-center mt-20 text-7xl font-semibold">Olá, Seja Bem Vindo</p>
+                <p id="Intro" class="absolute justify-self-center mt-20 text-7xl font-semibold text-center">Olá!</p>
+                <p id="Intro2" class="absolute justify-self-center mt-36 text-7xl font-semibold text-center">Seja Bem Vindo</p>
             </nav>
             
-            <span class="menuSpan grid grid-rows-4 bg-gradient-to-l from-cyan-500 to-indigo-500 h-svh fixed w-80">
+            <span id="spanHidden" class="menuSpan grid grid-rows-4 bg-gradient-to-l from-cyan-500 to-indigo-500 h-svh fixed w-80">
                 <img src="img/icon-menu.png" class="menuIcon2 p-1 h-12 -mt-1 fixed cursor-pointer hover:bg-cyan-100/50 rounded" alt="menuIcon">
                 <div class="grid grid-cols-1 mt-15">
-                    <a data-translate="inicioM" id="inicio" class="m-5 hover:text-white text-black font-bold" href="#inicio">Início</a>
-                    <a data-translate="sobreMimM" id="sobreMim" class="m-5 hover:text-white text-black font-bold" href="#sobre-mim">Sobre Mim</a>
-                    <a data-translate="" id="" class="m-5 hover:text-white text-black font-bold" href="#">Início</a>
-                    <a data-translate="contatoM" id="contato" class="m-5 hover:text-white text-black font-bold" href="#contato">Contato</a>
+                    <a data-translate="inicioM" id="inicioM" class="inicioM m-5 hover:text-white text-black font-bold" href="#inicio">Início</a>
+                    <a data-translate="sobreMimM" id="sobreMimM" class="sobreMimM m-5 hover:text-white text-black font-bold" href="#sobre-mim">Sobre Mim</a>
+                    <a data-translate="habilidadesM" id="habilidadesM" class="habilidadesM m-5 hover:text-white text-black font-bold" href="#habilidades">Habilidades</a>
+                    <a data-translate="contatoM" id="contatoM" class="contatoM m-5 hover:text-white text-black font-bold" href="#contato">Contato</a>
                 </div>
             </span>
             <!-- 1 coluna em mobile, 3 em desktop -->
             <div class="grid grid-rows-1 mt-14 md:mt-24">
                 <div class="grid grid-cols-1 md:grid-cols-3">
-                    <img class="foto w-36 md:w-44 md:col-span-1 row-span-1 justify-self-center rounded-full bordas-perfil" src="img/fotoperfil.jpg" alt="">
+                    <img class="foto mt-15 w-44 md:w-44 md:col-span-1 row-span-1 justify-self-center rounded-full bordas-perfil" src="img/fotoperfil.jpg" alt="">
                     <div class="grid grid-rows-1 col-span-2">
                         <div class="grid grid-cols-1">
-                            <p data-translate="introducao" class="text-2xl md:text-5xl md:mt-15 text-center font-extrabold">Fique a Vontade para Conhecer Mais Sobre Mim</p>
+                            <p data-translate="introducao" class="text-3xl md:text-5xl md:mt-15 text-center font-extrabold">Fique a Vontade para Conhecer Mais Sobre Mim</p>
                         </div>
                     </div>  
                 </div>
             </div>
             
         </div>
-        <section id="sobre-mim" class="grid grid-rows-1 m-10 rounded p-2">
+        <section id="sobre-mim" class="grid grid-rows-1 rounded h-svh">
             <div class="grid grid-rows-1">
                 <div class="grid grid-cols-1">
                     <p class="text-center text-3xl font-bold">Sobre Mim</p>
@@ -152,6 +155,14 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="habilidades" class="rounded">
+            <p>Em desenvolvimento</p>
+        </section>
+
+        <section id="contato" class="rounded">
+            <p>Em desenvolvimento</p>
         </section>
         
     <script src="scripts.js"></script>

@@ -5,6 +5,7 @@ btnText.textContent = 'Light';
 const btnMenu = document.querySelector('.menuIcon');
 const btnMenu2 = document.querySelector('.menuIcon2');
 const menuSpan = document.querySelector('.menuSpan');
+//const menuLinks = document.querySelectorAll('.inicioM, .sobreMimM, .habilidadesM, .contatoM');
 
 btnMenu.addEventListener('click', () => {
     menuSpan.classList.toggle('show');
@@ -15,6 +16,14 @@ btnMenu2.addEventListener('click', () => {
 
 // use a script tag or an external JS file
  document.addEventListener("DOMContentLoaded", (event) => {
+    /*menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            gsap.to('.menuSpan', {
+                visibility: 'hidden',
+                
+            });
+        });
+    });*/
     
     gsap.to(['#btnMenu', '#btnText', '#trilho', '#seletoridiomas'],{
         visibility: "hidden"
@@ -22,28 +31,34 @@ btnMenu2.addEventListener('click', () => {
     gsap.to('#Intro',{
         visibility: "visible"
     })
+    gsap.fromTo(['#Intro','#Intro2'], {
+        y: 350
+    },{
+        duration: 0.7,
+        y: 0
+    })
     gsap.fromTo('nav', {
-        height: 700
+        height: 700,
     },{
         height: 47,
-        delay: 2,
-        duration: .3,
+        delay: 3,
+        duration: .9,
         onStart: () => {
-            gsap.to('#Intro',{
+            gsap.to(['#Intro','#Intro2'],{
                 visibility: "hidden"
             });
+            
         },
         onComplete: () => {
             gsap.set(['#btnMenu', '#btnText', '#trilho', '#seletoridiomas'], {
                 visibility: "visible"
             });
-            
         }
     })
     gsap.to('.foto', {
         yoyo: true,
         y: 5,
-        duration: 3,
+        duration: 2,
         repeat: -1,
     })
     gsap.to('.bg-grad', {
@@ -108,13 +123,15 @@ btnMenu2.addEventListener('click', () => {
     const translations = {
         'pt-br': {
             introducao: 'Fique a Vontade para Conhecer Mais Sobre Mim',
-            inicioM: 'Este é um exemplo simples de como alterar o idioma de uma página usando JavaScript.',
+            inicioM: 'Início',
             sobreMim: 'Sobre Mim',
             contatoM: 'Contato'
         },
         'en': {
             introducao: 'Feel Free to Learn More About Me',
-           
+            inicioM: 'Home',
+            sobreMim: 'About Me',
+            contatoM: 'Contact'
         }
     };
 
