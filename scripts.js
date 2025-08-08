@@ -14,7 +14,7 @@ btnMenu2.addEventListener('click', () => {
     menuSpan.classList.toggle('show');
 });
 
-// use a script tag or an external JS file
+
  document.addEventListener("DOMContentLoaded", (event) => {
     /*menuLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -34,15 +34,27 @@ btnMenu2.addEventListener('click', () => {
     gsap.fromTo(['#Intro','#Intro2'], {
         y: 350
     },{
-        duration: 0.7,
+        duration: 1,
         y: 0
     })
-    gsap.fromTo('nav', {
-        height: 750,
+    gsap.fromTo('#videoIntro', {
+        height: '100%',
     },{
-        height: 47,
-        delay: 3,
-        duration: .9,
+        height: 0,
+        delay: 5.5,
+        duration: 1,
+        onComplete: () => {
+            gsap.set('#videoIntro', {
+                visibility: "hidden"
+            });
+        }
+    })
+    gsap.fromTo('nav', {
+        height: '100%',
+    },{
+        height: 0,
+        delay: 5.5,
+        duration: 1,
         onStart: () => {
             gsap.to(['#Intro','#Intro2'],{
                 visibility: "hidden"
@@ -62,9 +74,9 @@ btnMenu2.addEventListener('click', () => {
         repeat: -1,
     })
     gsap.to('.bg-grad', {
-        repeat: -1,             // -1 para loop infinito
-        yoyo: true,             // Volta para o estado inicial suavemente
-        duration: 3,            // Duração da animação em segundos
+        repeat: -1,           
+        yoyo: true,
+        duration: 3,
         // Novas cores para animar
         "--cor-var": "#599aaa",
 

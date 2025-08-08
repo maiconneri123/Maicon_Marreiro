@@ -58,6 +58,7 @@
             box-shadow: -2px -2px 10px 0px #7736b1, 2px 2px 10px 0px #4cfff6;
             padding: .8%;
             margin: 3%;
+            z-index: 1;
         }
         .idiomas{
             font-weight: 500;
@@ -74,11 +75,16 @@
             box-shadow: 0px -5px 10px -3px #04c1a8, 0px 5px 10px -3px #0f0ff8;
             border-radius: 5%;
         }
+        video{
+            width: 100%;
+            height: 45px;
+            object-fit: fill;
+            z-index: -1;
+        }
     </style>
 </head>
 <body class="dark">
-        
-        <div id="inicio" class="grid grid-rows-1 bg-grad h-svh">
+        <div id="inicio" class="grid grid-rows-1 bg-grad h-auto sm:h-svh md:h-svh">
             <nav class="grid grid-rows-1 fixed w-full dark">
                 <div class="grid grid-cols-4">
                     <button id="btnMenu">
@@ -88,17 +94,18 @@
                     <button id="trilho" class="trilho mt-2">
                         <div id="btnDL" class=" border border-white"></div>
                     </button>
-                    <div id="seletoridiomas" class="grid grid-rows-1 bg-gray-500">
-                        <div class="grid grid-cols-3 md:pl-15 md:pr-15 lg:pl-28 lg:pr-28">
-                            <button class="idiomas cursor-pointer text-end bg-red-800" onclick="alterarIdioma('pt-br')">pt-br</button>
+                    <div id="seletoridiomas" class="grid grid-rows-1">
+                        <div class="grid grid-cols-3 md:pl-15 md:pr-15 lg:pl-20 lg:pr-20">
+                            <button class="idiomas cursor-pointer text-end" onclick="alterarIdioma('pt-br')">pt-br</button>
                             <p class="mt-2 text-center">­│</p>
                             <button class="idiomas cursor-pointer text-start" onclick="alterarIdioma('en')">en</button>
                         </div>
                     </div>
                     
                 </div>
-                <p id="Intro" class="absolute justify-self-center mt-20 text-7xl font-semibold text-center">Olá!</p>
-                <p id="Intro2" class="absolute justify-self-center mt-36 text-7xl font-semibold text-center">Seja Bem Vindo</p>
+                <video id="videoIntro" autoplay loop muted class="fixed opacity-50" src="img/5353-183788401.mp4"></video>
+                <p id="Intro" class="absolute justify-self-center mt-16 text-8xl font-bold text-center">Olá!</p>
+                <p id="Intro2" class="absolute justify-self-center mt-38 text-8xl font-bold text-center">Seja Bem Vindo</p>
             </nav>
             
             <span id="spanHidden" class="menuSpan grid grid-rows-4 bg-gradient-to-l from-cyan-500 to-indigo-500 h-svh fixed w-80">
@@ -113,7 +120,7 @@
             <!-- 1 coluna em mobile, 3 em desktop -->
             <div class="grid grid-rows-1 mt-14 md:mt-24">
                 <div class="grid grid-cols-1 md:grid-cols-3">
-                    <img class="foto mt-15 w-44 md:w-56 md:col-span-1 row-span-1 justify-self-center rounded-full bordas-perfil" src="img/fotoperfil.jpg" alt="">
+                    <img class="foto mt-12 w-44 md:w-44 lg:w-56 md:col-span-1 row-span-1 justify-self-center rounded-full bordas-perfil" src="img/fotoperfil.jpg" alt="">
                     <div class="grid grid-rows-1 col-span-2">
                         <div class="grid grid-cols-1">
                             <p data-translate="introducao" class="text-3xl md:text-5xl md:mt-24 text-center font-extrabold">Fique a Vontade para Conhecer Mais Sobre Mim</p>
@@ -121,12 +128,12 @@
                     </div>  
                 </div>
             </div>
-            
         </div>
-        <section id="sobre-mim" class="grid grid-rows-1 rounded">
+
+        <section id="sobre-mim" class="grid grid-rows-1 rounded h-auto">
             <div class="grid grid-rows-1">
                 <div class="grid grid-cols-1">
-                    <p data-translate="sobreMimM" class="text-center text-3xl font-bold">Sobre Mim</p>
+                    <p data-translate="sobreMimM" class="text-center text-3xl font-bold mt-10 underline">Sobre Mim</p>
                     <p data-translate="" class="text-center">Meu nome é Maicon, tenho 28 anos e sou natural de Toledo PR, mas atualmente moro em Vila Nova PR.
                          Gosto de conteúdos relacionados a computação, música, arte e atividades físicas, e também sempre busco aprender e evoluir em todos os aspectos da vida.<br>
                            Em outubro de 2024, comecei a cursar Tecnologia em Sistemas para Internet na <a data-translate="" href="https://www.utfpr.edu.br/campus/toledo">UTFPR campus Toledo</a>, para que no futuro (não tão distante, eu espero) eu possa mudar de profissão.</p>
@@ -157,14 +164,18 @@
             </div>
         </section>
 
-        <section id="habilidades" class="rounded text-center">
+        <section id="habilidades" class="rounded text-center sm:h-svh md:h-svh">
             <p data-translate="emDev">Em Desenvolvimento</p>
         </section>
 
-        <section id="contato" class="rounded text-center">
+        <section id="contato" class="rounded text-center sm:h-svh md:h-svh">
             <p data-translate="emDev">Em Desenvolvimento</p>
         </section>
         
+        <section id="projetos" class="rounded text-center sm:h-svh md:h-svh">
+            <p data-translate="emDev">Em Desenvolvimento</p>
+        </section>
+         
     <script src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </body>
