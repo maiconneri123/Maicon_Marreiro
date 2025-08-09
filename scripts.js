@@ -58,7 +58,7 @@ btnMenu2.addEventListener('click', () => {
             
         },
         onComplete: () => {
-            gsap.set(['#btnMenu', '#btnText', '#trilho', '#seletoridiomas'], {
+            gsap.set(['#btnMenu', '#btnText', '#trilho', '#seletoridiomas', '.foto', '#txtApresentacao'], {
                 visibility: "visible"
             });
         }
