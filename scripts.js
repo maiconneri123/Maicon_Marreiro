@@ -25,12 +25,7 @@ btnMenu2.addEventListener('click', () => {
         });
     });*/
     
-    gsap.to(['#btnMenu', '#btnText', '#trilho', '#seletoridiomas'],{
-        visibility: "hidden"
-    })
-    gsap.to('#Intro',{
-        visibility: "visible"
-    })
+    
     gsap.fromTo(['#Intro','#Intro2'], {
         y: 350
     },{
