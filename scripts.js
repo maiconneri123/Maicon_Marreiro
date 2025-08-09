@@ -52,10 +52,11 @@ btnMenu2.addEventListener('click', () => {
     gsap.fromTo('nav', {
         height: '100%',
     },{
-        height: 0,
+        height: 47,
         delay: 5.5,
         duration: 1,
         onStart: () => {
+            
             gsap.to(['#Intro','#Intro2'],{
                 visibility: "hidden"
             });

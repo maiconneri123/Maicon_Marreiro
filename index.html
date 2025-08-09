@@ -81,10 +81,14 @@
             object-fit: fill;
             z-index: -1;
         }
+        .myH{
+            min-height: 100vh;
+            max-height: auto;
+        }
     </style>
 </head>
 <body class="dark">
-        <div id="inicio" class="grid grid-rows-1 bg-grad h-auto sm:h-svh md:h-svh">
+        <div id="inicio" class="grid grid-rows-1 bg-grad myH">
             <nav class="grid grid-rows-1 fixed w-full dark">
                 <div class="grid grid-cols-4">
                     <button id="btnMenu">
@@ -164,15 +168,15 @@
             </div>
         </section>
 
-        <section id="habilidades" class="rounded text-center sm:h-svh md:h-svh">
+        <section id="habilidades" class="rounded text-center myH">
             <p data-translate="emDev">Em Desenvolvimento</p>
         </section>
 
-        <section id="contato" class="rounded text-center sm:h-svh md:h-svh">
+        <section id="contato" class="rounded text-center myH">
             <p data-translate="emDev">Em Desenvolvimento</p>
         </section>
         
-        <section id="projetos" class="rounded text-center sm:h-svh md:h-svh">
+        <section id="projetos" class="rounded text-center myH">
             <p data-translate="emDev">Em Desenvolvimento</p>
         </section>
          
