@@ -13,15 +13,12 @@ btnMenu.addEventListener('click', () => {
 btnMenu2.addEventListener('click', () => {
     menuSpan.classList.toggle('show');
 });
-
-
  document.addEventListener("DOMContentLoaded", (event) => {
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
             menuSpan.classList.toggle('show');
         });
     });
-    
     
     gsap.fromTo(['#Intro','#Intro2'], {
         y: 350
