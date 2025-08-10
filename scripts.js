@@ -5,7 +5,7 @@ btnText.textContent = 'Light';
 const btnMenu = document.querySelector('.menuIcon');
 const btnMenu2 = document.querySelector('.menuIcon2');
 const menuSpan = document.querySelector('.menuSpan');
-//const menuLinks = document.querySelectorAll('.inicioM, .sobreMimM, .habilidadesM, .contatoM');
+const menuLinks = document.querySelectorAll('.inicioM, .sobreMimM, .habilidadesM, .contatoM');
 
 btnMenu.addEventListener('click', () => {
     menuSpan.classList.toggle('show');
@@ -16,14 +16,11 @@ btnMenu2.addEventListener('click', () => {
 
 
  document.addEventListener("DOMContentLoaded", (event) => {
-    /*menuLinks.forEach(link => {
+    menuLinks.forEach(link => {
         link.addEventListener('click', () => {
-            gsap.to('.menuSpan', {
-                visibility: 'hidden',
-                
-            });
+            menuSpan.classList.toggle('show');
         });
-    });*/
+    });
     
     
     gsap.fromTo(['#Intro','#Intro2'], {
