@@ -86,7 +86,7 @@
         }
         video{
             width: 100%;
-            height: auto;
+            height: 100%;
             object-fit: fill;
             z-index: -1;
         }
@@ -191,6 +191,13 @@
  
     <script src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                window.scrollTo(0, 0);
+            }, 100); // Tenta rolar após 100 milissegundos
+        });
+    </script>
 </body>
 </body>
 </html>
