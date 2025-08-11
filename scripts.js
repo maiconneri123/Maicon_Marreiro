@@ -19,16 +19,7 @@ btnMenu2.addEventListener('click', () => {
             menuSpan.classList.toggle('show');
         });
     });
-    
-    gsap.fromTo(['#Intro','#Intro2'], {
-        y: 350
-    },{
-        duration: 1,
-        y: 0
-    })
-    gsap.fromTo('#videoIntro', {
-        height: '100%',
-    },{
+    gsap.to('#videoIntro', {
         height: 0,
         delay: 5.5,
         duration: 1,
@@ -38,6 +29,13 @@ btnMenu2.addEventListener('click', () => {
             });
         }
     })
+    gsap.fromTo(['#Intro','#Intro2'], {
+        y: 350
+    },{
+        duration: 1,
+        y: 0
+    })
+    
     gsap.fromTo('nav', {
         height: '100%',
     },{
