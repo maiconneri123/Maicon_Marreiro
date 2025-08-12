@@ -47,7 +47,9 @@ btnMenu2.addEventListener('click', () => {
             gsap.to(['#Intro','#Intro2'],{
                 visibility: "hidden"
             });
-            
+            gsap.to('.dark', {
+                backgroundColor: '#cecece'
+            });
         },
         onComplete: () => {
             gsap.set(['#btnMenu', '#btnText', '#trilho', '#seletoridiomas', '.foto', '#txtApresentacao', '.bg-grad'], {
@@ -70,9 +72,7 @@ btnMenu2.addEventListener('click', () => {
 
         ease: "power1.inOut"
     })
-    gsap.to('.dark', {
-        backgroundColor: '#cecece'
-    })
+    
 
     btnDL.addEventListener('click', ()=> {
         if (btnText.textContent == 'Light') {
