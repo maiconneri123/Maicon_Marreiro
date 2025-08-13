@@ -14,6 +14,11 @@ btnMenu2.addEventListener('click', () => {
     menuSpan.classList.toggle('show');
 });
  document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.to(window, {
+        duration: 0.1, // Duração da animação em segundos
+        scrollTo: 0,   // Rola para a posição 0 (topo)
+        ease: "power2.inOut" // Suavização da animação
+    });
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
             menuSpan.classList.toggle('show');
@@ -30,10 +35,10 @@ btnMenu2.addEventListener('click', () => {
         }
     })
     gsap.fromTo(['#Intro','#Intro2'], {
-        y: 350
+        x: -650
     },{
-        duration: 1,
-        y: 0
+        duration: 1.5,
+        x: 0
     })
     
     gsap.fromTo('nav', {
@@ -52,7 +57,7 @@ btnMenu2.addEventListener('click', () => {
             });
         },
         onComplete: () => {
-            gsap.set(['#btnMenu', '#btnText', '#trilho', '#seletoridiomas', '.foto', '#txtApresentacao', '.bg-grad'], {
+            gsap.set(['#btnMenu', '#btnText', '#trilho', '#seletoridiomas', '.foto', '#txtApresentacao', '.bg-grad', 'section'], {
                 visibility: "visible"
             });
         }
