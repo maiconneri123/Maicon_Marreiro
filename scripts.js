@@ -38,7 +38,12 @@ btnMenu2.addEventListener('click', () => {
         x: -650
     },{
         duration: 1.5,
-        x: 0
+        x: 0,
+        onStart: () => {
+            gsap.to(['#Intro','#Intro2'], {
+                visibility: "visible"
+            })
+        }
     })
     
     gsap.fromTo('nav', {
