@@ -14,10 +14,10 @@ btnMenu2.addEventListener('click', () => {
     menuSpan.classList.toggle('show');
 });
  document.addEventListener("DOMContentLoaded", (event) => {
-    gsap.to(window, {
-        duration: 0.1, // Duração da animação em segundos
-        scrollTo: 0,   // Rola para a posição 0 (topo)
-        ease: "power2.inOut" // Suavização da animação
+    gsap.to([document.documentElement, document.body], {
+        duration: 0.1,
+        scrollTo: { y: 0 },
+        ease: "power2.inOut"
     });
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
